@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 
 
 function Home() {
@@ -9,8 +10,8 @@ function Home() {
             <h2 className="text-5xl font-bold">Remédios </h2>
             <p className="text-xl">Aqui você encontra tudo o que precisa</p>
             <div className="flex justify-around gap-4">
-              <div className="rounded text-[#FF5D8F] border-[#FF5D8F] border-solid border-2 py-2 px-4">
-                Categorias
+              <div className="rounded-3xl text-[#F5F5F5] bg-[#FF5D8F] border-solid border-2 py-2 px-4">
+                <Link to='/categorias' className=''>Categorias</Link>
               </div>
             </div>
           </div>
