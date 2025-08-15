@@ -7,23 +7,23 @@ interface CardCategoriasProps {
 
 function CardCategoria({categoria}: CardCategoriasProps) {
   return (
-    <div className=" flex flex-col rounded-2xl overflow-hidden justify-between">
-      <header className="py-2 px-6 bg-[#FF87AB] text-white font-bold text-2xl">
+    <div className=" flex flex-col bg-white rounded-lg shadow-sm border border-gray-200 justify-between">
+      <header className="py-2 px-6 bg-white font-semibold text-2xl">
         {categoria.nome}
       </header>
-      <p className="p-8 text-3xl bg-[#F5F5F5] h-full">
+      <p className="p-8 text-lg h-full text-gray-500">
         {categoria.descricao}
       </p>
-      <div className="flex">
+      <div className="flex gap-4 p-4">
         <Link to={`/editarcategoria/${categoria.id}`} 
-          className="w-full text-slate-100 bg-[#094E86] hover:bg-[#091586] 
-                    flex items-center justify-center py-2">
-          <button>Editar</button>
+          className="text-slate-100 flex items-center justify-center w-full">
+          <button className="bg-slate-600 hover:bg-slate-400 py-2 px-4 rounded-xl w-full">Editar</button>
         </Link>
         <Link to={`/deletarcategoria/${categoria.id}`}
-          className="text-slate-100 bg-red-400 hover:bg-red-700 w-full 
+          className="text-slate-100 w-full 
                     flex items-center justify-center">
-          <button>Deletar</button>
+          <button className="bg-red-400 hover:bg-red-700 py-2 px-4 rounded-xl w-full">
+            Deletar</button>
         </Link>
       </div>
     </div>
