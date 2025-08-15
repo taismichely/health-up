@@ -70,37 +70,37 @@ function FormCategoria() {
     }
 
   return (
-    <div className="container flex flex-col items-center justify-center mx-auto">
-      <h1 className="text-4xl text-center my-8">
+    <div className="container flex flex-col items-center justify-center">
+      <h1 className="text-3xl text-center my-4 font-bold">
         {id === undefined ? 'Cadastrar Categoria' : 'Editar Categoria'}
       </h1>
 
-      <form className="w-1/2 flex flex-col gap-4" onSubmit={gerarNovaCategoria} >
+      <form className="w-[400px] flex flex-col gap-4 py-8 px-4 shadow-sm border border-gray-200" onSubmit={gerarNovaCategoria} >
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Nome da categoria</label>
+          <label htmlFor="descricao" className="text-gray-700">Nome da categoria</label>
             <input
               type="text"
               placeholder="Qual é o nome da categoria"
               name='nome'
-              className="border-2 border-slate-700 rounded p-2"
+              className="border-2 border-gray-400 rounded p-2"
               value={categoria.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
         </div>
         <div className="flex flex-col gap-2">
-          <label htmlFor="descricao">Descrição da categoria</label>
+          <label htmlFor="descricao" className="text-gray-700">Descrição da categoria</label>
             <input
               type="text"
               placeholder="Descreva a descrição da categoria"
               name='descricao'
-              className="border-2 border-slate-700 rounded p-2"
+              className="border-2 border-gray-400 rounded p-2"
               value={categoria.descricao}
               onChange={(e: ChangeEvent<HTMLInputElement>) => atualizarEstado(e)}
             />
         </div>
         <button
-          className="rounded text-slate-100 bg-indigo-400 
-                 hover:bg-[#094E86] w-1/2 py-2 mx-auto flex justify-center"
+          className="rounded text-slate-100 bg-[#c7a170] 
+                 hover:bg-[#c7a190] w-1/2 py-2 mx-auto flex justify-center"
           type="submit">
           <span>{id === undefined ? 'Cadastrar' : 'Atualizar'}</span>
         </button>
