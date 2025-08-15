@@ -1,27 +1,21 @@
-import { Link } from "react-router-dom"
-
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <>
-      <div className="min-h-80 bg-[#F5F5F5] flex justify-center">
-        <div className="container grid grid-cols-2 text-[#094E86]">
-          <div className="flex flex-col gap-4 items-center justify-center py-4">
-            <h2 className="text-5xl font-bold">Remédios </h2>
-            <p className="text-xl">Aqui você encontra tudo o que precisa</p>
-            <div className="flex justify-around gap-4">
-              <div className="rounded-3xl text-[#F5F5F5] bg-[#FF5D8F] border-solid border-2 py-2 px-4">
-                <Link to='/categorias' className=''>Categorias</Link>
-              </div>
-            </div>
-          </div>
-          <div>
-            <div className="h-100 bg-[#1F5E91] w-2/3">teste</div>
-          </div>
+      <div className="min-h-80 bg-[#F5F5F5] flex justify-center relative">
+        <img
+          src="https://ik.imagekit.io/taelipsvolt/imagemfarmacia_7L4PEmf8_?updatedAt=1755293393035"
+          alt="imagem de fundo"
+          className="w-full min-h-screen object-cover"
+        />
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-[#213e60]">
+          <h2 className="bg-white text-6xl font-bold mb-4">Remédios </h2>
+          <p className="text-3xl font-bold bg-white">Aqui você encontra tudo o que precisa</p>
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default Home
+export default Home;
