@@ -48,25 +48,24 @@ function DeletarCategoria() {
   }
 
   return (
-    <div className='container w-1/3 mx-auto'>
-      <h1 className='text-4xl text-center my-4'>Deletar tema</h1>
+    <div className='container flex flex-col items-center justify-center'>
+      <h1 className='text-3xl text-center my-4 font-bold'>Deletar tema</h1>
         <p className='text-center font-semibold mb-4'>
           Você tem certeza de que deseja apagar o tema a seguir?</p>
-        <div className='border flex flex-col rounded-2xl overflow-hidden justify-between'>
+        <div className='w-[400px] flex flex-col gap-4 py-4 px-4 shadow-sm border border-gray-200'>
           <header 
-            className='py-2 px-6 bg-indigo-600 text-white font-bold text-2xl'>
+            className='py-2 px-6 font-bold text-2xl'>
               Tema
           </header>
-            <p className='p-8 text-3xl bg-slate-200 h-full'>{categoria.descricao}</p>
-            <div className="flex">
+            <p className='p-8 text-3xl h-full'>{categoria.descricao}</p>
+            <div className="flex gap-4 p-4 text-white">
               <button 
-                className='text-slate-100 bg-red-400 hover:bg-red-600 w-full py-2'
+                className='bg-red-400 hover:bg-red-700 py-2 px-4 rounded-xl w-full'
                 onClick={retornar}>
                   Não
               </button>
               <button 
-                className='w-full text-slate-100 bg-indigo-400 
-                   hover:bg-indigo-600 flex items-center justify-center'
+                className='bg-slate-600 hover:bg-slate-400 py-2 px-4 rounded-xl w-full'
                 onClick={deletarCategoria}>
                   Sim
               </button>
