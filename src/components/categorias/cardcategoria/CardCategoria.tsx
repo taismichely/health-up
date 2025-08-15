@@ -8,7 +8,7 @@ interface CardCategoriasProps {
 function CardCategoria({categoria}: CardCategoriasProps) {
   return (
     <div className=" flex flex-col bg-white rounded-lg shadow-sm border border-gray-200 justify-between">
-      <header className="py-2 px-6 bg-white font-semibold text-2xl">
+      <header className="py-2 px-6 bg-white font-semibold text-slate-900 text-2xl">
         {categoria.nome}
       </header>
       <p className="p-8 text-lg h-full text-gray-500">
